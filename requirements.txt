@@ -1,0 +1,2 @@
+dbt-snowflake==1.6.4
+"elementary-data[snowflake]"==0.11.0
