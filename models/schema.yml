@@ -57,6 +57,8 @@ models:
       - elementary.dimension_anomalies:
           dimensions:
             - status
+      - elementary.python:
+          code_macro: check_undelivered_orders
     columns:
       - name: order_id
         description: This is a unique identifier for an order
