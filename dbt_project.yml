@@ -1,9 +1,9 @@
-name: "elementary_tutorial"
+name: "dbt_elementary"
 
 config-version: 2
 version: "1.0.0"
 
-profile: "elementary_tutorial"
+profile: "dbt_elementary"
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -20,7 +20,9 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  elementary_tutorial:
+  dbt_elementary:
     materialized: table
     staging:
       materialized: view
+  elementary:
+    schema: "elementary_report"

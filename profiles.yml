@@ -1,0 +1,25 @@
+dbt_elementary:
+  outputs:
+    default:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASS') }}"
+      role: accountadmin
+      warehouse: compute_wh
+      database: local
+      schema: public
+      threads: 1
+
+elementary:
+  outputs:
+    default:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: elementary
+      password: "{{ env_var('ELEMENTARY_PASS') }}"
+      role: ELEMENTARY_ROLE
+      warehouse: compute_wh
+      database: local
+      schema: elementary_report
+      threads: 1
